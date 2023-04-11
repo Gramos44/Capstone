@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>Material Calcultor</title>
+    <style>
+      body {
+	background-color: lightgray;
+  color: #214261;
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+	font-size: 16px;
+	text-align: ;
+	transition: all .3s ease;
+}
+
+h1, h2 {
+  font: 700 24px/1.2 "Poppins", sans-serif;
+}
+h4 {
+  font-size: 5px;
+  padding-top: 90px;
+}
+
+fieldset{border: 1px solid #214261;}
+
+input[type="text"] {color: #214261;font-size: 16px;
+padding: 5px;}
+    </style>
+  </head>
+  <body>
+    <h1>Materials Calculator</h1>
+<p>This calculator will round up in 1/4 cubic yard increments:</p>
+<form name="volcalc">
+	<fieldset>
+	    <legend>Enter your dimensions</legend>
+	    <label class="field_name">Enter Length (Ft)</label>
+	    <input name="length" class="field" onkeyup="calc();" type="text" />
+	    <br /><br />
+	    <label class="field_name">Enter Width (Ft)</label>
+	    <input name="width" class="field" onkeyup="calc();" type="text" />
+	    <br /><br />
+	    <label class="field_name">Enter Depth (In)</label>
+	    <input name="depth" class="field" onkeyup="calc();" type="text" />
+	    <br />
+	</fieldset>
+
+	<fieldset>
+	    <legend>Total</legend>
+	    <label class="field_name">Total yards needed</label>
+	    <input name="vol" class="field_total" type="text" />
+	</fieldset>
+
+	</form>	
+
+<h2>How to Use this Materials Calculator</h2>
+
+<p>A cubic yard is the volume of material which fits in a space one yard wide by one yard deep by one yard high. Cubic yards are used to measure materials ranging from concrete to mulch for your garden.</p>
+
+<ul>
+<li><strong>Coverage Area Length</strong> – First you need to carefully measure the length of your project's coverage area. The calculator requires this measurement to be taken in Feet (ft). Double check your measurement, then enter that number.</li>
+<li><strong>Coverage Area Width</strong> – Next, enter the width of your coverage area into the calculator. Just like the length, this number also needs to be in Feet.</li>
+<li><strong>Coverage Area Depth</strong> – The final number the calculator will need, is the depth. However, this number will need to be supplied in Inches (In). Enter this number into the 3rd box and your calculation will then be complete.</li>
+
+  <h4>
+    <br>Code by David Williams
+  </h4>
+</ul>
+  </body>
+</html>

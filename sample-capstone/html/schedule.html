@@ -1,11 +1,169 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+		.product {
+			display: inline-block;
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 200px;
+			height: 300px;
+			box-shadow: 0px 0px 10px #ccc;
+			text-align: center;
+		}
+		.product img {
+			max-width: 100%;
+			max-height: 200px;
+		}
+		.product h3 {
+			font-size: 18px;
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
+		.product p {
+			font-size: 14px;
+			margin-top: 5px;
+			margin-bottom: 10px;
+			height: 60px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.product button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.product button:hover {
+			background-color: #3e8e41;
+		}
+
+
+    
+    .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: firebrick;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #38444d;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.active {
+  background-color: forestgreen;
+  color: white;
+}
+
+    
+	</style>
+</head>
+<body>
+  <div class="topnav">
+  <a href="schedule.html" class="active">Scheduling </a>
+  <div id="myLinks">
+    <a href="https://test-for-capstone.elohall01.repl.co/sample-capstone/">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="estimate.html">Estimating Tools</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html"> Contact us</a>
+
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  <img scr="../images/menu.jpg" alt="Menu">
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
   <head>
-    <title>Schedule</title>
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <link href="../css/schedule.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Appointment Maker</title>
+    <style>
+      button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin: 0 auto;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+        /* Dark green */
+      }
+
+      /*  CSS to center the button */
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
   </head>
+
   <body>
-    ...
+    <div class="container">
+      <h1>Plan a Delivery/Pick Up </h1>
+      <p>Please click the button down below in order to schedule a delivery/pick up of materials:</p>
+      <form action=https://outlook.office365.com/owa/calendar/HallsBobcatService1@hallsbobcatservice.com/bookings/
+        target="_blank">
+        <button type="submit">Schedule Appointment</button>
+      </form>
+    </div>
   </body>
+
 </html>

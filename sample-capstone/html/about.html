@@ -1,145 +1,223 @@
-
 <!DOCTYPE html>
-<title>About Us  </title>
+<title>About Us </title>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+    }
+
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #766258;
+      color: white;
+    }
+
+    .container {
+      background-color: whitesmoke;
+      padding: 0 16px;
+    }
+
+    .container::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+  </style>
+</head>
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+    .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: firebrick;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
 }
 
-html {
-  box-sizing: border-box;
+.topnav {
+  overflow: hidden;
+  background-color: #54463F;
+  position: relative;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+.topnav #myLinks {
+  display: none;
 }
 
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+.topnav a.icon {
+  background: #433832;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
+.topnav a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.active {
+  background-color: #54463F;
   color: white;
 }
 
-.container {
-  padding: 0 16px;
-}
+    
+	</style>
+</head>
+<body style="background-color: #DCD1CB;">
+  <div class="topnav">
+  <a href="about.html" class="active">About Us </a>
+  <div id="myLinks">
+    <a href="https://test-for-capstone.elohall01.repl.co/sample-capstone/">Home</a>
+    <a href="estimate.html">Estimating Tools</a>
+    <a href="products.html">Our Products</a>
+    <a href="schedule.html">Schedule Appointment</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html"> Contact Us </a>
 
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
 }
-</style>
-</head>
-<body>
+</script>
+<body style="background-color: #766258;">
+  <div class="about-section">
+    <h1>About Us Page</h1>
+    <p>At Hall's Bobcat Service, we take the time with our customers to go over every aspect of their project no matter
+      how big or small. Projects can be bid over the phone in a few minutes or detailed out in hours of designing and
+      planning. We offer complete computer design layout before the project is ever started to insure the customer's
+      satisfaction.
+    <p>
+    <p>"We are driven to take care of our customers", Shane Hall...President
 
-<div class="about-section">
-  <h1>About Us Page</h1>
-  <p>At Hall's Bobcat Service, we take the time with our customers to go over every aspect of their project no matter how big or small. Projects can be bid over the phone in a few minutes or detailed out in hours of designing and planning. We offer complete computer design layout before the project is ever started to insure the customer's satisfaction. <p>
-  <p>"We are driven to take care of our customers", Shane Hall...President
 
+      Hall's Bobcat Service is family-owned and operated right here in Miami County, Kansas. Since our company started
+      in 1998, we’ve treated every customer like they were a part of our family. Other companies may offer similar
+      services, but our services are the best, and come with a personal touch. </p>
+  </div>
 
-    Hall's Bobcat Service is family-owned and operated right here in Miami County, Kansas. Since our company started in 1998, we’ve treated every customer like they were a part of our family. Other companies may offer similar services, but our services are the best, and come with a personal touch.  </p>
-</div>
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="../images/Shane.jpg" alt="Shane" style="width:100%">
+        <div class="container">
+          <h2>Shane Hall </h2>
+          <p class="title">Co-Founder</p>
+          <p>A little about what shane does </p>
+        
+        </div>
+      </div>
+    </div>
 
-<h2 style="text-align:center">Our Team</h2>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="herdad.jpg" alt="Shane" style="width:100%">
-      <div class="container">
-        <h2>Shane Hall </h2>
-        <p class="title">Co-Founder</p>
-        <p>A little about what shane does </p>
-        <p>Phone - (913) 731-7067</p>
+    <div class="column">
+      <div class="card">
+        <img src="../images/Nick.jpg" alt="Nick" style="width:100%">
+        <div class="container">
+          <h2>Nick Hampson </h2>
+          <p class="title">Secretary</p>
+          <p>A little bit about nick </p>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="../images/Pam.jpg" alt="Pam" style="width:100%">
+        <div class="container">
+          <h2>Pam Hall</h2>
+          <p class="title">Secretary </p>
+          <p> A little discrption about miss pam .</p>
+          
+
+        </div>
       </div>
     </div>
   </div>
-
   <div class="column">
     <div class="card">
-      <img src="Nick.jpg" alt="Nick" style="width:100%">
-      <div class="container">
-        <h2>Nick Hampson </h2>
-        <p class="title">Job Title</p>
-        <p>A little bit about nick </p>
-        <p> Phone - (913) 755-1449</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <img src="grandma.jpg" alt="Pam" style="width:100%">
-      <div class="container">
-        <h2>Pam Hall</h2>
-        <p class="title">Job Title </p>
-        <p> A little discrption about miss pam .</p>
-        <p>Phone - (913) 285-0550</p>
-       
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="column">
-    <div class="card">
-      <img src="Travis.jpg" alt="Travis" style="width:100%">
+      <img src="../images/Travis.jpg" alt="Travis" style="width:100%">
       <div class="container">
         <h2>Travis Hall </h2>
-        <p class="title">Job Title </p>
+        <p class="title">Co-Founder </p>
         <p> A little discrption about Travis .</p>
-        <p>Phone - (913) 731-7039</p>
-       
-      </div>
-    </div>
-  </div>
-</div>
-
 
 </body>
+
 </html>

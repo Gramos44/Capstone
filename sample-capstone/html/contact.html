@@ -1,52 +1,136 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <link href="../css/contact.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-     <div class="container">
-    <div class="content">
-      <div class="left-side">
-        <div class="address details">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Address</div>
-          <div class="text-one">607 Mulberry Ave.</div>
-          <div class="text-two">Osawatomie, KS 66064</div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/contact.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+		
+    .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: firebrick;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #38444d;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.active {
+  background-color: #8B0000;
+  color: white;
+}
+
+    
+	</style>
+</head>
+
+<body>
+  
+  <div class="topnav">
+  <a href="products.html" class="active">Contact Us</a>
+  <div id="myLinks">
+    <a href="https://test-for-capstone.elohall01.repl.co/sample-capstone/">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="estimate.html">Estimating Tools</a>
+    <a href="products.html">Our Products</a>
+    <a href="schedule.html">Schedule Appointment</a>
+    <a href="services.html">Services</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  <img scr="../images/menu.jpg" alt="Menu">
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+    <div class="container">
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">607 Mulberry Ave.</div>
+            <div class="text-two">Osawatomie, KS 66064</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">Office: (913) 245-4089</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">nickhampson.rockyard@gmail.com</div>
+          </div>
         </div>
-        <div class="phone details">
-          <i class="fas fa-phone-alt"></i>
-          <div class="topic">Phone</div>
-          <div class="text-one">Office: (913) 245-4089</div>
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
-          <div class="topic">Email</div>
-          <div class="text-one">nickhampson.rockyard@gmail.com</div>
+        <div class="right-side">
+          <div class="topic-text">Send us a message</div>
+          <p>If you have any inquiries about anything, you can send us a message from here. It's our pleasure to help
+            you.
+            Please allow 1-2 business days for us to get back with you.</p>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Enter your email">
+            </div>
+            <div class="input-box message-box">
+              <input type="text" placeholder="Enter your message">
+            </div>
+            <div class="button">
+              <input type="button" value="Send Now">
+            </div>
+          </form>
         </div>
       </div>
-      <div class="right-side">
-        <div class="topic-text">Send us a message</div>
-        <p>If you have any inquiries about anything, you can send us a message from here. It's our pleasure to help you. Please allow 1-2 business days for us to get back with you.</p>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Enter your name">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your email">
-        </div>
-        <div class="input-box message-box">
-          <input type="text" placeholder="Enter your message">
-        </div>
-        <div class="button">
-          <input type="button" value="Send Now" >
-        </div>
-      </form>
     </div>
-    </div>
-  </div>
-</body>
+  </body>
+
 </html>
