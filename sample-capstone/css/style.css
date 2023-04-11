@@ -147,3 +147,25 @@ body{
    margin-left: 0;
  }
 }
+@media (max-width: 600px) {
+  /* add styles here for screens with a maximum width of 600px */
+  .container {
+    width: 100%;
+    padding: 20px 30px;
+  }
+  .container .content .left-side {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .container .content .left-side .details {
+    margin: 10px;
+  }
+  .container .content .right-side {
+    width: 100%;
+    margin-left: 0;
+  }
+  .right-side .button {
+    display: block;
+    text-align: center;
+  }
+}

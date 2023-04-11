@@ -1,71 +1,198 @@
 <!DOCTYPE html>
 <html>
-  
   <head>
-    <title>Material Calcultor</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Materials Calculator</title>
     <style>
       body {
-	background-color: lightgray;
-  color: #214261;
-	font-family: "Poppins", sans-serif;
-	font-weight: 300;
-	line-height: 1.5;
-	font-size: 16px;
-	text-align: ;
-	transition: all .3s ease;
+        background-color: #DCD1CB;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        text-align: center;
+        color: #54463F;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;
+        max-width: 500px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: whitesmoke;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #54463F;
+      }
+      
+      input[type="number"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        font-size: 16px;
+      }
+      
+      input[type="button"] {
+        background-color: #54463F;
+        color: #fff;
+        font-size: 16px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      
+      input[type="button"]:hover {
+        background-color: #766258;
+      }
+      
+      textarea {
+        width: 100%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        font-size: 16px;
+        resize: none;
+      }
+      
+      #output {
+        height: 80px;
+      }
+
+       .boxed {
+          border: 5px solid #54463F;
+          padding-bottom: 10px;
+        }
+
+          .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: firebrick;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
 }
 
-h1, h2 {
-  font: 700 24px/1.2 "Poppins", sans-serif;
-}
-h4 {
-  font-size: 5px;
-  padding-top: 90px;
+.topnav {
+  overflow: hidden;
+  background-color: #766258;
+  position: relative;
 }
 
-fieldset{border: 1px solid #214261;}
+.topnav #myLinks {
+  display: none;
+}
 
-input[type="text"] {color: #214261;font-size: 16px;
-padding: 5px;}
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: #433832;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.active {
+  background-color: #54463F;
+  color: white;
+}
     </style>
   </head>
   <body>
+    <body style="background-color:#DCD1CB ;">
+  <div class="topnav">
+  <a href="products.html" class="active">Estimating Tools</a>
+  <div id="myLinks">
+    <a href="https://test-for-capstone.elohall01.repl.co/sample-capstone/">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Our Products</a>
+    <a href="schedule.html">Schedule Appointment</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
     <h1>Materials Calculator</h1>
-<p>This calculator will round up in 1/4 cubic yard increments:</p>
-<form name="volcalc">
-	<fieldset>
-	    <legend>Enter your dimensions</legend>
-	    <label class="field_name">Enter Length (Ft)</label>
-	    <input name="length" class="field" onkeyup="calc();" type="text" />
-	    <br /><br />
-	    <label class="field_name">Enter Width (Ft)</label>
-	    <input name="width" class="field" onkeyup="calc();" type="text" />
-	    <br /><br />
-	    <label class="field_name">Enter Depth (In)</label>
-	    <input name="depth" class="field" onkeyup="calc();" type="text" />
-	    <br />
-	</fieldset>
+    <form>
+      <label for="width">Width (ft):</label>
+      <input type="number" id="width" name="width">
 
-	<fieldset>
-	    <legend>Total</legend>
-	    <label class="field_name">Total yards needed</label>
-	    <input name="vol" class="field_total" type="text" />
-	</fieldset>
+      <label for="length">Length (ft):</label>
+      <input type="number" id="length" name="length">
 
-	</form>	
+      <label for="depth">Depth (inches):</label>
+      <input type="number" id="depth" name="depth">
 
-<h2>How to Use this Materials Calculator</h2>
+      <input type="button" value="Calculate" onclick="calculate()">
 
-<p>A cubic yard is the volume of material which fits in a space one yard wide by one yard deep by one yard high. Cubic yards are used to measure materials ranging from concrete to mulch for your garden.</p>
+      <label for="output">Output:</label>
+      <textarea id="output" readonly></textarea>
+    </form>
+  <div class="boxed">
+    <h3 style="margin-left: 20px;"> How to Use the Materials Calculator</h3>
+    <p style="margin-left: 40px;"><b>Width</b>: First, you need to measure the width of your project's coverage area. This calculation will require that your measurements are in feet (ft). After this, proceed to insert the number in the corresponding box.</p>
+    <p style="margin-left: 40px;"><b>Length</b>: Second, you need to measure the length of your project's coverage area. This calculation will require that your measurements are also in feet (ft). After you have completed the measuring, proceed to insert the number into the corresponding box.</p>
+    <p style="margin-left: 40px;"><b>Depth</b>: Lastly, you need to measure the depth of your project's coverage area. This calculation will require that your measurements are in inches. Then, proceed to insert the number into the corresponding box and hit "Calculate". </p>
+  </div>
 
-<ul>
-<li><strong>Coverage Area Length</strong> – First you need to carefully measure the length of your project's coverage area. The calculator requires this measurement to be taken in Feet (ft). Double check your measurement, then enter that number.</li>
-<li><strong>Coverage Area Width</strong> – Next, enter the width of your coverage area into the calculator. Just like the length, this number also needs to be in Feet.</li>
-<li><strong>Coverage Area Depth</strong> – The final number the calculator will need, is the depth. However, this number will need to be supplied in Inches (In). Enter this number into the 3rd box and your calculation will then be complete.</li>
+    <script>
+      function calculate() {
+        // Get the values from the input fields
+        const width = document.getElementById("width").value;
+        const length = document.getElementById("length").value;
+        const depth = document.getElementById("depth").value;
 
-  <h4>
-    <br>Code by David Williams
-  </h4>
-</ul>
+        // Convert depth to feet
+        const depth_feet = depth / 12;
+
+        // Calculate the total cubic feet
+         const total_cubic_feet = width * length * depth_feet / 27;
+
+        // Display the output
+        const output = document.getElementById("output");
+        output.value = "You need " + total_cubic_feet + " cubic feet of material.";
+      }
+    </script>
   </body>
 </html>
