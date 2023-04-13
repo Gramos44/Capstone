@@ -4,7 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Delivery Zones</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+     body{
+    background-color: #DCD1CB;
+  }
+		
+  .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: firebrick;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #766258;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: #433832;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.active {
+  background-color: #54463F;
+  color: white;
+}
     form {
       display: flex;
       flex-direction: column;
@@ -67,6 +116,32 @@
 }
     }
   </style>
+
+  <div class="topnav">
+  <a href="../html/zones.html" class="active">Delivery Zones</a>
+  <div id="myLinks">
+    <a href="https://test-for-capstone.elohall01.repl.co/sample-capstone/">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="estimate.html">Estimating Tools</a>
+    <a href="products.html">Our Products</a>
+    <a href="schedule.html">Schedule Appointment</a>
+    <a href="services.html">Services</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
   <div class ="google-map"; text-align: center >
   <p style="text-align: center;"><iframe src="https://www.google.com/maps/d/embed?mid=1MJzGkvTXIYhZ8PgUt2kPRzxyTfwxLl-I&ehbc=2E312F" width="640" height="480"></iframe></p>
   </div>
