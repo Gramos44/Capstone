@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us </title>
+  <link rel="stylesheet" href="/sample-capstone/css/contact.css">
 </head>
-<style>
-  body{
-    background-color: #DCD1CB;
-  }
-		
-  .mobile-container {
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+       .mobile-container {
   max-width: 480px;
   margin: auto;
   background-color: firebrick;
@@ -56,47 +55,181 @@
   background-color: #54463F;
   color: white;
 }
-.fcf-body {
-    font-family: -apple-system, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #DCD1CB;
-    text-align: left;
+
+    #myFooter {
+  background-color: #38444d;
 }
-  input[type=text], select, textarea {
-  width: 50%;
-  padding: 12px;
-  border: 1px solid whitesmoke;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 10px;
-  margin-bottom: 16px;
-  resize: vertical;
-  
+#footHeader {
+  font-size: 30px;
+  color: white;
+  text-shadow: -1px 1px 2px #000, 1px 2px 6px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#766258;
+}
+    li {
+  float: left;
+  width:14%; /* approximate equal length of each category */
+  text-align: center;
 }
 
-input[type=submit] {
-  background-color: #766258;
+li a, .dropbtn {
+  display: inline-block;
   color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #A88C7D;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #D3D3D3;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}   
+.centeralign {
+  text-align: center;
+}
+
+p {
+  padding-left: 50pt;
+  padding-right: 50pt;
+  padding-top: 20pt;
+  text-indent: 20px;
+  text-align:left;
+  line-height: 1.5;
 }
     
-	</style>
-</head>
+.thumb {
+    max-height: 171px;
+    border: solid 6px rgba(5, 5, 5, 0.8);
+}
 
-<body>
-  
+.lightbox {
+    position: fixed;
+    z-index: 999;
+    height: 0;
+    width: 0;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+    opacity: 0;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+    
+}
+
+.lightbox:target img {
+    border: solid 17px rgba(77, 77, 77, 0.8);
+    opacity: 1;
+    webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.light-btn {
+    color: #fafafa;
+    background-color: #333;
+    border: solid 3px #777;
+    padding: 5px 15px;
+    border-radius: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    position: absolute;
+    top: 45%;
+    z-index: 99;
+}
+
+.light-btn:hover {
+    background-color: #111;
+}
+
+.btn-prev {
+    left: 7%;
+}
+
+.btn-next {
+    right: 7%;
+}
+
+.btn-close {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    color: #fafafa;
+    background-color: #92001d;
+    border: solid 5px #ef4036;
+    padding: 10px 15px;
+    border-radius: 1px;
+    text-decoration: none;
+}
+
+.btn-close:hover {
+    background-color: #740404;
+}
+    .fa:hover {
+      opacity: 0.9;
+    }
+    .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+	</style>
+
+  <body style="background-color:#DCD1CB ;">
   <div class="topnav">
   <a href="contact.html" class="active">Contact Us</a>
   <div id="myLinks">
     <a href="https://test-for-capstone.elohall01.repl.co/sample-capstone/">Home</a>
     <a href="about.html">About Us</a>
     <a href="estimate.html">Estimating Tools</a>
-    <a href="products.html">Our Products</a>
     <a href="schedule.html">Schedule Appointment</a>
+    <a href="products.html">Our Products</a>
     <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
   </div>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -113,45 +246,69 @@ function myFunction() {
   }
 }
 </script>
-  
-<h4 style="font-size: 20px;">Please allow 24-48 hours for a response. We will get back to you as soon as possible! Thank you!</h4>
-  <h5>The fields marked with a * are required.</h5>
-  
-  <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-            <label for="Name" class="fcf-label">Name*</label>
-            <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-            </div>
-    
-        <div class="fcf-form-group">
-            <label for="Email" class="fcf-label">Your Email* </label>
-            <div class="fcf-input-group">
-                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-            </div>
-          
-         <br> <label for="contact reason">Contact Reason</label> <br>
-    <select id="contact reason" name="contact reason">
-      <option value="dummy">SELECT</option>
-      <option value="general">General Inquiry</option>
+<body>
+  <section>
+    <div class="container">
+      <h2 style="text-align:center;">Contact Us</h2>
+      <br>
+      <h6>The fields marked with * are required.</h6>
+      <form action="https://formspree.io/f/mnqylpjj" id="test-form" method="POST">
+        <div class="form-group">
+          <label for="firstName">First Name*</label>
+          <input type="text" id="firstName" name="firstName">
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name*</label>
+          <input type="text" id="lastName" name="lastName">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email">
+        </div>
+
+         <div class="form-group">
+          <label for="phone">Phone Number*</label>
+          <input type="text" id="phone" name="phone">
+        </div>
+
+  <div class="form-group">
+  <label for="reason"> Reason for Contact:</label>
+<select name="reason" id="reason"style="width:60%; justify-content: center;">
+  <option value="dummy">Select</option>
+   <option value="general">General Inquiry</option>
       <option value="estimate">Future Job Inquiry</option>
       <option value="bobcat work">Gravel Hauling/ Driveway Work</option>
       <option value="dirt work">Dirt Work/ Corrective Drainage</option>
       <option value="materials">Product or Materials Inquiry</option>
-
-
-    </select>
-        <div class="fcf-form-group">
-            <label for="Message" class="fcf-label">Your Message*</label>
-            <div class="fcf-input-group">
-                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-            </div>
-        </div>
-        <div class="fcf-form-group">
-            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+</select>
+  </div>
+        
+        <div class="form-group">
+          <label for="message">Message*</label>
+          <textarea name="message" id="message" rows="10" maxlength="200"></textarea>
         </div>
 
-         
-    
-  </body>
+        <button type="submit" id="test-form-submit">Submit</button>
+      </form>
+    </div>
+    <div id="status"></div>
+  </section>
+  <script src="/sample-capstone/js/contact.js"></script>
+  <h4 style="text-align:center;"> Please allow us 24-48 hours to respond back to your messages. Thank you!</h4>
 
+   <footer id = "myFooter"></footer>
+    <footer class="page-footer" style="padding-top: 100px;">
+      <div class="container">
+        <h2 style = "padding-left: auto; background-color: #DCD1CB;"> Other Links</h2>
+            <ul>
+              <li><a class="grey-text text-lighten-6" href="https://www.facebook.com/profile.php?id=100057816692899">Follow us on Facebook</a> </li>
+            <li><a href="https://www.facebook.com/profile.php?id=100057816692899" class="fa fa-facebook"></a></li>
+            
+            
+            </ul>
+          </div>
+        </footer>
+</body>
 </html>

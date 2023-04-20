@@ -14,6 +14,11 @@
   <script src="FAQ.js"> </script>
 </head>
 <style>
+  body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
   button {
     background-color: #B9A397;
     border: none;
@@ -30,7 +35,7 @@
 
   button:hover {
     background-color: lightgray;
-    /* Dark green */
+    
   }
 
   /*  CSS to center the button */
@@ -174,6 +179,167 @@
   .accordion.active .accordion__answer {
     display: block;
   }
+  #myFooter {
+  background-color: #38444d;
+}
+#footHeader {
+  font-size: 30px;
+  color: white;
+  text-shadow: -1px 1px 2px #000, 1px 2px 6px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#766258;
+}
+    li {
+  float: left;
+  width:14%; /* approximate equal length of each category */
+  text-align: center;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #A88C7D;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #D3D3D3;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}   
+.centeralign {
+  text-align: center;
+}
+
+p {
+  padding-left: 50pt;
+  padding-right: 50pt;
+  padding-top: 20pt;
+  text-indent: 20px;
+  text-align:left;
+  line-height: 1.5;
+}
+    
+.thumb {
+    max-height: 171px;
+    border: solid 6px rgba(5, 5, 5, 0.8);
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 999;
+    height: 0;
+    width: 0;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+    opacity: 0;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+    
+}
+
+.lightbox:target img {
+    border: solid 17px rgba(77, 77, 77, 0.8);
+    opacity: 1;
+    webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.light-btn {
+    color: #fafafa;
+    background-color: #333;
+    border: solid 3px #777;
+    padding: 5px 15px;
+    border-radius: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    position: absolute;
+    top: 45%;
+    z-index: 99;
+}
+
+.light-btn:hover {
+    background-color: #111;
+}
+
+.btn-prev {
+    left: 7%;
+}
+
+.btn-next {
+    right: 7%;
+}
+
+.btn-close {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    color: #fafafa;
+    background-color: #92001d;
+    border: solid 5px #ef4036;
+    padding: 10px 15px;
+    border-radius: 1px;
+    text-decoration: none;
+}
+
+.btn-close:hover {
+    background-color: #740404;
+}
+  .fa:hover {
+      opacity: 0.9;
+    }
+    .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
 </style>
 </head>
 
@@ -251,7 +417,7 @@
       </div>
     </div>
 
-    <div class="w3-container" style="padding:10px; width:50% text-align:center" >
+    <div class="w3-container" style="padding:10px; width:25% text-align:center" >
       <button onclick="myFunctionFAQ('Demo2')" class="w3-btn w3-block w3-brown " style="padding: 20px;">How do I get in touch with you?</button>
       <div id="Demo2" class="w3-container w3-hide">
         <h4>You can email or call the Office at *email or phone #*.</h4>
@@ -259,7 +425,7 @@
 
     </div>
 
-    <div class="w3-container" style="padding:10px; width:50% text-align:justify">
+    <div class="w3-container" style="padding:10px; width:50% text-align:justify ">
       <button onclick="myFunctionFAQ('Demo3')" class="w3-btn w3-block w3-brown " style="padding: 20px;">Should I book an appointment for a job estimate?</button>
       <div id="Demo3" class="w3-container w3-hide">
         <h4>Depending on the extent of your job, you may need to book an appointment. If it is something listed on our
@@ -272,9 +438,8 @@
 <div id="Demo4" class="w3-container w3-hide">
   <h4>If there is something that you don't see that we do normally (see services page) or you need us on site to do something for you.</h4>
 </div>
-      
     </div>
-
+  
 
   </body>
 

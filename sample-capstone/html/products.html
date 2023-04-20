@@ -5,6 +5,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Products</title>
 	<style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
 		.product {
 			display: inline-block;
 			margin: 20px;
@@ -93,8 +96,167 @@
   color: white;
 }
 
+    #myFooter {
+  background-color: #38444d;
+}
+#footHeader {
+  font-size: 30px;
+  color: white;
+  text-shadow: -1px 1px 2px #000, 1px 2px 6px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#766258;
+}
+    li {
+  float: left;
+  width:14%; /* approximate equal length of each category */
+  text-align: center;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #A88C7D;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #D3D3D3;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}   
+.centeralign {
+  text-align: center;
+}
+
+p {
+  padding-left: 50pt;
+  padding-right: 50pt;
+  padding-top: 20pt;
+  text-indent: 20px;
+  text-align:left;
+  line-height: 1.5;
+}
     
+.thumb {
+    max-height: 171px;
+    border: solid 6px rgba(5, 5, 5, 0.8);
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 999;
+    height: 0;
+    width: 0;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+    opacity: 0;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
     
+}
+
+.lightbox:target img {
+    border: solid 17px rgba(77, 77, 77, 0.8);
+    opacity: 1;
+    webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.light-btn {
+    color: #fafafa;
+    background-color: #333;
+    border: solid 3px #777;
+    padding: 5px 15px;
+    border-radius: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    position: absolute;
+    top: 45%;
+    z-index: 99;
+}
+
+.light-btn:hover {
+    background-color: #111;
+}
+
+.btn-prev {
+    left: 7%;
+}
+
+.btn-next {
+    right: 7%;
+}
+
+.btn-close {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    color: #fafafa;
+    background-color: #92001d;
+    border: solid 5px #ef4036;
+    padding: 10px 15px;
+    border-radius: 1px;
+    text-decoration: none;
+}
+
+.btn-close:hover {
+    background-color: #740404;
+}
+    .fa:hover {
+      opacity: 0.9;
+    }
+    .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
 	</style>
 </head>
 <body style="background-color:#DCD1CB ;">
@@ -122,19 +284,38 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+  // Get the img object using its Id
+    img = document.getElementById("img1");
+    // Function to increase image size
+function enlargeImg() {
+        // Set image size to 1.5 times original
+        img.style.transform = "scale(1.5)";
+        // Animation effect
+        img.style.transition = "transform 0.25s ease";
+    }
+    // Function to reset image size
+    function resetImg() {
+        // Set image size to original
+        img.style.transform = "scale(1)";
+        img.style.transition = "transform 0.25s ease";
+    }
 </script>
 
   <h3> In stock items are sold by the cubic yard and range in weight from 2200- 3800 lbs. per yard. </h3> <br>
   <br><h4> Construction Aggregate</h4>
+  
 
+  
 	<div class="products">
 		<div class="product">
-			<img src="../product_images/1:2Chips.jpg" alt="Product 1">
+      
+			<img src="../product_images/1:2Chips.jpg" alt="Product 1" id="img1" onclick="enlargeImg()">
 			<h3>1/2" Chips</h3>
 			<p>$65.00/cu.yd. </p>
 			<button>Add to Estimate</button>
 		</div>
-    
+  
 		<div class="product">
 			<img src="../product_images/screenings.jpg" alt="Product 2">
 			<h3>Screenings</h3>
@@ -246,5 +427,18 @@ function myFunction() {
 			<button>See Pricing Sheet</button>
 		</div>
 	</div>
+
+  <footer id = "myFooter"></footer>
+    <footer class="page-footer" style="padding-top: 100px;">
+      <div class="container">
+        <h2 style = "padding-left: 20px; background-color: #DCD1CB;"> Other Links</h2>
+            <ul>
+              <li><a class="grey-text text-lighten-6" href="https://www.facebook.com/profile.php?id=100057816692899">Follow us on Facebook</a> </li>
+            <li><a href="https://www.facebook.com/profile.php?id=100057816692899" class="fa fa-facebook"></a></li>
+            
+            
+            </ul>
+          </div>
+        </footer>
 </body>
 </html>

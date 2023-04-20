@@ -8,6 +8,7 @@
   <style>
      body{
     background-color: #DCD1CB;
+       font-family: Arial, Helvetica, sans-serif;
   }
 		
   .mobile-container {
@@ -115,6 +116,186 @@
      position: absolute;
 }
     }
+    #myFooter {
+  background-color: #38444d;
+}
+#footHeader {
+  font-size: 30px;
+  color: white;
+  text-shadow: -1px 1px 2px #000, 1px 2px 6px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#766258;
+}
+    li {
+  float: left;
+  width:14%; /* approximate equal length of each category */
+  text-align: center;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #A88C7D;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #D3D3D3;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}   
+.centeralign {
+  text-align: center;
+}
+
+p {
+  padding-left: 50pt;
+  padding-right: 50pt;
+  padding-top: 20pt;
+  text-indent: 20px;
+  text-align:left;
+  line-height: 1.5;
+}
+    
+.thumb {
+    max-height: 171px;
+    border: solid 6px rgba(5, 5, 5, 0.8);
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 999;
+    height: 0;
+    width: 0;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+    opacity: 0;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+    
+}
+
+.lightbox:target img {
+    border: solid 17px rgba(77, 77, 77, 0.8);
+    opacity: 1;
+    webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.light-btn {
+    color: #fafafa;
+    background-color: #333;
+    border: solid 3px #777;
+    padding: 5px 15px;
+    border-radius: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    position: absolute;
+    top: 45%;
+    z-index: 99;
+}
+
+.light-btn:hover {
+    background-color: #111;
+}
+
+.btn-prev {
+    left: 7%;
+}
+
+.btn-next {
+    right: 7%;
+}
+
+.btn-close {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    color: #fafafa;
+    background-color: #92001d;
+    border: solid 5px #ef4036;
+    padding: 10px 15px;
+    border-radius: 1px;
+    text-decoration: none;
+}
+
+.btn-close:hover {
+    background-color: #740404;
+}
+    .fa:hover {
+      opacity: 0.9;
+    }
+    .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+    button {
+    background-color: #B9A397;
+    border: none;
+    color: whitesmoke;
+    /*padding: 15px 32px;*/
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  button:hover {
+    background-color: lightgray;
+    
+  }
   </style>
 
   <div class="topnav">
@@ -126,6 +307,7 @@
     <a href="products.html">Our Products</a>
     <a href="schedule.html">Schedule Appointment</a>
     <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
   </div>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -142,10 +324,32 @@ function myFunction() {
   }
 }
 </script>
-  <div class ="google-map"; text-align: center >
+
+  <h3 style="text-align:center;">Delivery Zones</h3>
+  <p style="font-size: 15px; padding-bottom:10px;"> The Google Map below shows the different delivery zones we have. When you select the zone you want us to delivery your materials to, it will help the office to schedue and make plans for the delivery week. If you do not see the zone you are looking for, please feel free to reach out to us. </p>
+  
+  <HR NOSHADE SIZE = 3>
+  
+  <h4 style="text-align:center;">Please select a zone</h4>
+
+  
+  <label for="delivery-zones" style="font-size:15px; margin-left:550px; ">Delivery Zone:</label>
+<select name="delivery-zones" id="delivery-zones"style="width:10%; justify-content: center;">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+</select>
+  
+  <button><i>Select</i> </button>
+
+  
+  <div class ="google-map" style="padding-bottom:50px;"; text-align: center >
   <p style="text-align: center;"><iframe src="https://www.google.com/maps/d/embed?mid=1MJzGkvTXIYhZ8PgUt2kPRzxyTfwxLl-I&ehbc=2E312F" width="640" height="480"></iframe></p>
   </div>
-  <script>
+  <!--<script>
     var map;
     function initMap() {
       var myLatLng = {lat: 94.5606, lng: 38.2324}; // Set default location
@@ -174,7 +378,22 @@ function myFunction() {
     <input type="hidden" id="lat" name="lat">
     <input type="hidden" id="lng" name="lng">
     <input type="submit" value="Get Estimate">
-  </form>
+  </form> -->
+
+
+  
+  <footer id = "myFooter"></footer>
+    <footer class="page-footer">
+      <div class="container">
+        <h2 style = "padding-left: 20px; background-color: #DCD1CB;"> Other Links</h2>
+            <ul>
+              <li><a class="grey-text text-lighten-6" href="https://www.facebook.com/profile.php?id=100057816692899">Follow us on Facebook</a> </li>
+            <li><a href="https://www.facebook.com/profile.php?id=100057816692899" class="fa fa-facebook"></a></li>
+            
+            
+            </ul>
+          </div>
+        </footer>
 </body>
 
 </html>
