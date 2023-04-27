@@ -22,15 +22,29 @@
     }
 
     .column {
-      float: left;
-      width: 33.3%;
+      float:center;
+      width: 50%;
       margin-bottom: 16px;
       padding: 0 8px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
     }
 
     .card {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       margin: 8px;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 25%;
     }
 
     .about-section {
@@ -118,131 +132,6 @@
       background-color: #A88C7D;
     }
 
-    li.dropdown {
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #D3D3D3;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .centeralign {
-      text-align: center;
-    }
-
-    p {
-      padding-left: 50pt;
-      padding-right: 50pt;
-      padding-top: 20pt;
-      text-indent: 20px;
-      text-align: left;
-      line-height: 1.5;
-      color: black;
-    }
-
-    .thumb {
-      max-height: 171px;
-      border: solid 6px rgba(5, 5, 5, 0.8);
-    }
-
-    .lightbox {
-      position: fixed;
-      z-index: 999;
-      height: 0;
-      width: 0;
-      text-align: center;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.8);
-      opacity: 0;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      margin-top: 2%;
-      opacity: 0;
-    }
-
-    .lightbox:target {
-      /** Remove default browser outline */
-      outline: none;
-
-      width: 100%;
-      height: 100%;
-      opacity: 1 !important;
-
-    }
-
-    .lightbox:target img {
-      border: solid 17px rgba(77, 77, 77, 0.8);
-      opacity: 1;
-      webkit-transition: opacity 0.6s;
-      transition: opacity 0.6s;
-    }
-
-    .light-btn {
-      color: #fafafa;
-      background-color: #333;
-      border: solid 3px #777;
-      padding: 5px 15px;
-      border-radius: 1px;
-      text-decoration: none;
-      cursor: pointer;
-      vertical-align: middle;
-      position: absolute;
-      top: 45%;
-      z-index: 99;
-    }
-
-    .light-btn:hover {
-      background-color: #111;
-    }
-
-    .btn-prev {
-      left: 7%;
-    }
-
-    .btn-next {
-      right: 7%;
-    }
-
-    .btn-close {
-      position: absolute;
-      right: 2%;
-      top: 2%;
-      color: #fafafa;
-      background-color: #92001d;
-      border: solid 5px #ef4036;
-      padding: 10px 15px;
-      border-radius: 1px;
-      text-decoration: none;
-    }
-
-    .btn-close:hover {
-      background-color: #740404;
-    }
 
     .mobile-container {
       max-width: 480px;
@@ -332,7 +221,7 @@
 
   <body style="background-color: #766258;">
     <div class="about-section">
-      <h1 style="color: black;">About Us</h1>
+      <h1 style="color: whitesmoke;">About Us</h1>
       <p>At Hall's Bobcat Service, we take the time with our customers to go over every aspect of their project no
         matter
         how big or small. Projects can be bid over the phone in a few minutes or detailed out in hours of designing and
@@ -348,80 +237,80 @@
     </div>
 
     <h2 style="text-align:center">Our Team</h2>
+    <div class="row" >
+      <div class="column">
+        <img src="../images/Travis.jpg" alt="Travis" style="width:50%" class="center">
+        <div class="container">
+          <h2 style="text-align:center">Travis Hall</h2>
+          <p class="title">Co-Founder </p>
+          <p> Travis is a hardworking and versatile individual who holds several job titles. As a co-owner, he plays a
+            key role in managing and growing the business. As a truck driver, he transports materials safely and
+            efficiently to various locations. In his field work excavation heavy equipment operator role, Travis
+            operates heavy machinery with precision and skill, ensuring projects are completed on time and to a high
+            standard. In addition to his professional roles, Travis is also the brother of Shane Hall. Overall, Travis
+            is a dedicated and dependable individual who excels in his various roles and takes pride in his work.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
       <div class="column">
-        <div class="card">
-          <img src="../images/Shane.jpg" alt="Shane" style="width:100%">
-          <div class="container">
-            <h2>Shane Hall </h2>
-            <p class="title">Co-Founder</p>
-            <p> Shane is a versatile professional with a diverse skill set and range of responsibilities. He serves as a
-              co-owner of a company, contributing to strategic planning, financial management, and daily operations.
-              With expertise in architectural design, Shane creates practical and innovative designs for various types
-              of structures, ensuring that his company's projects are functional and aesthetically pleasing. As a
-              project manager, Shane oversees all aspects of a project, from adhering to budgets and meeting deadlines
-              to maintaining quality standards and communicating effectively with clients, contractors, and employees.
-              He is also experienced in field work and excavation, with the ability to operate heavy equipment and
-              navigate challenging environments. Outside of his professional endeavors, Shane is a devoted family
-              member, including being the brother of Travis Hall, highlighting his strong personal relationships and
-              family values.</p>
+        <img src="../images/Shane.jpg" alt="Shane" style="width:50%" class="center">
+        <div class="container">
+          
+          <h2 style="text-align:center">Shane Hall</h2>
+          <p class="title">Co-Founder</p>
+          <p>Shane is a versatile professional with a diverse skill set and range of responsibilities. He serves as a
+            co-owner of a company, contributing to strategic planning, financial management, and daily operations.
+            With expertise in architectural design, Shane creates practical and innovative designs for various types
+            of structures, ensuring that his company's projects are functional and aesthetically pleasing. As a
+            project manager, Shane oversees all aspects of a project, from adhering to budgets and meeting deadlines
+            to maintaining quality standards and communicating effectively with clients, contractors, and employees.
+            He is also experienced in field work and excavation, with the ability to operate heavy equipment and
+            navigate challenging environments. Outside of his professional endeavors, Shane is a devoted family
+            member, including being the brother of Travis Hall, highlighting his strong personal relationships and
+            family values.</p>
 
-          </div>
         </div>
       </div>
+    </div>
 
+    <div class="row">
       <div class="column">
-        <div class="card">
-          <img src="../images/Grandma.jpg" alt="Pam" style="width:100%">
-          <div class="container">
-            <h2>Pam Hall</h2>
-            <p class="title">Secretary </p>
-            <p> Pam is a multitasking individual who wears many hats in her life. As a secretary, she schedules
-              appointments, takes calls, and takes care of the office's paperwork efficiently. In her dispatch role, she
-              coordinates the transportation of materials, ensuring timely delivery to customers. As a heavy machinery
-              operator, Pam operates machinery with ease and precision, ensuring safety and productivity at The Yard.
-              She is also the proud mother of Shane and Travis supports them both in their business endeavors. Overall,
-              Pam is a versatile and dedicated individual who excels in all her roles.</p>
+        <img src="../images/Grandma.jpg" alt="Pam" style="width:50%" class=" center ">
+        <div class="container">
+          <h2 style="text-align:center">Pam Hall</h2>
+          <p class="title">Secretary </p>
+          <p> Pam is a multitasking individual who wears many hats in her life. As a secretary, she schedules
+            appointments, takes calls, and takes care of the office's paperwork efficiently. In her dispatch role, she
+            coordinates the transportation of materials, ensuring timely delivery to customers. As a heavy machinery
+            operator, Pam operates machinery with ease and precision, ensuring safety and productivity at The Yard.
+            She is also the proud mother of Shane and Travis supports them both in their business endeavors. Overall,
+            Pam is a versatile and dedicated individual who excels in all her roles.</p>
 
 
-          </div>
         </div>
       </div>
+    </div>
 
+    <div  class="row justify-content-center">
       <div class="column">
-        <div class="card">
-          <img src="../images/Travis.jpg" alt="Travis" style="width:100%">
-          <div class="container">
-            <h2>Travis Hall </h2>
-            <p class="title">Co-Founder </p>
-            <p> Travis is a hardworking and versatile individual who holds several job titles. As a co-owner, he plays a
-              key role in managing and growing the business. As a truck driver, he transports materials safely and
-              efficiently to various locations. In his field work excavation heavy equipment operator role, Travis
-              operates heavy machinery with precision and skill, ensuring projects are completed on time and to a high
-              standard. In addition to his professional roles, Travis is also the brother of Shane Hall. Overall, Travis
-              is a dedicated and dependable individual who excels in his various roles and takes pride in his work.</p>
-          </div>
+        <img src="../images/Nick.jpg" alt="Nick" style="width:50%" class="center">
+        <div class="container">
+          <h2 style="text-align:center">Nick Hampson</h2>
+          <p class="title">Secretary</p>
+          <p>Nick is a dynamic individual who holds several diverse roles. As a secretary, he is responsible for
+            managing administrative tasks, organizing schedules, and maintaining records. In addition to this, Nick is
+            also an outdoor salesman who excels at building relationships with clients and promoting products and
+            services. As a truck driver, he has experience in safely transporting materials to various destinations.
+            Nick is also skilled in operating heavy machinery. Furthermore, Nick has been elected as the Mayor of
+            Osawatomie, where he uses his leadership skills and vision to improve the community's overall well-being.
+            His commitment to public service, coupled with his diverse professional experiences, highlights Nick's
+            versatility and ability to excel in multiple roles for the business. </p>
+
         </div>
       </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="../images/Nick.jpg" alt="Nick" style="width:100%">
-          <div class="container">
-            <h2>Nick Hampson </h2>
-            <p class="title">Secretary</p>
-            <p>Nick is a dynamic individual who holds several diverse roles. As a secretary, he is responsible for
-              managing administrative tasks, organizing schedules, and maintaining records. In addition to this, Nick is
-              also an outdoor salesman who excels at building relationships with clients and promoting products and
-              services. As a truck driver, he has experience in safely transporting materials to various destinations.
-              Nick is also skilled in operating heavy machinery. Furthermore, Nick has been elected as the Mayor of
-              Osawatomie, where he uses his leadership skills and vision to improve the community's overall well-being.
-              His commitment to public service, coupled with his diverse professional experiences, highlights Nick's
-              versatility and ability to excel in multiple roles for the business. </p>
-
-          </div>
-        </div>
-      </div>
+    </div>
     </div>
 
     <footer id="myFooter"></footer>
@@ -437,8 +326,6 @@
         </ul>
       </div>
     </footer>
-
-    x
   </body>
 
 </html>
